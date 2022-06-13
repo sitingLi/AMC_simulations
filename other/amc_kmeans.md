@@ -1,7 +1,8 @@
 # Categorization using AMC and K-means
 
 ## Generate input data (e.g. a single exposure including three c)
-- An exposure variable including three categories, which was generated from three normal distributions (the ground truth of number of categories k equals to 3)
+- An exposure variable including three categories, which was generated from three normal distributions 
+- The ground truth of number of categories k equals to 3)
 
 ``` r
 # Generate input data
