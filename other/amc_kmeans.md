@@ -52,7 +52,9 @@ fviz_nbclust(input2, kmeans, method = "wss") # Visualizing the Optimal k
 ```
 
 We will determine the optimal k by elbow method:
+
 <img src="elbow1.png" width="40%" />
+
 We can select k = 3.
 
 
