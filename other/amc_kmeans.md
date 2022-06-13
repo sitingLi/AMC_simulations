@@ -1,7 +1,7 @@
 # Categorization using AMC and K-means
 
 ## Generate input data (e.g. a single exposure including three c)
-- A exposure variable including three categories, which was generated from three normal distributions (the ground truth of number of categories k equals to 3)
+- An exposure variable including three categories, which was generated from three normal distributions (the ground truth of number of categories k equals to 3)
 
 ``` r
 # Generate input data
@@ -36,8 +36,9 @@ expected_value <- factor(c(t(ground_truth)))
 confusionMatrix(data = predicted_value, reference = expected_value)
 ```
 The accuracy and Kappa score by amc:
-Accuracy : 0.895           
-Kappa : 0.8188 
+
+- Accuracy : 0.895           
+- Kappa : 0.8188 
 
 
 ## Next, we 
