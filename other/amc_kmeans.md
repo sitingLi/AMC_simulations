@@ -36,17 +36,24 @@ predicted_value <- factor(c(t(output)))
 expected_value <- factor(c(t(ground_truth)))
 confusionMatrix(data = predicted_value, reference = expected_value)
 ```
-The accuracy and Kappa score by amc:
+Accuracy and Kappa score by amc:
 
 - Accuracy : 0.895           
 - Kappa : 0.8188 
 
 
-## Next, we 
+## Next, we use elbow method to select the k of k-means
+``` r
+#install.packages("factoextra")
+library(factoextra)
+input2 = scale(input)   # scale the input
+input2 <- data.frame(input2)
+fviz_nbclust(input2, kmeans, method = "wss") # Visualizing the Optimal k
+```
 
-
-
-
+We will determine the optimal k by elbow method:
+<img src="other/elbow1.png" width="64%" />
+We can select k = 3.
 
 
 ``` r
