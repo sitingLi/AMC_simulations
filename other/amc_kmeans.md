@@ -100,3 +100,19 @@ confusionMatrix(data = predicted_value2, reference = expected_value)
 Accuracy and Kappa score by K-means:
 - Accuracy : 0.868   
 - Kappa : 0.7797   
+
+
+
+## Compare the results
+
+AMC: the amc package itself selects the optimal k as 3
+
+K-means: we select the optimal k as 3 by observing the elbow point
+
+Accuracy and Kappa score by amc:
+- Accuracy : 0.895           
+- Kappa : 0.8188 
+
+Accuracy and Kappa score by K-means:
+- Accuracy : 0.868   
+- Kappa : 0.7797   
