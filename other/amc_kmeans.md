@@ -67,7 +67,7 @@ We can select k = 3. (However, k = 4 looks more likely to be the elbow point, wh
 library(dplyr)
 output_sim = matrix(NA,1000,1)
 order = rep(1:1000)                  
-km_data_temp <- kmeans(input2$X1, 3, nstart = 1)
+km_data_temp <- kmeans(input2$X1, 3, nstart = 1) # To compare the result, we use k = 3 in this k-means
 temp = cbind(order, input2$X1, km_data_temp$cluster, rep(NA))  
 temp = data.frame(temp)
 temp = arrange(temp, V2)                
