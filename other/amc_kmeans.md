@@ -21,6 +21,8 @@ names(ground_truth) <- "X1_ground_truth"
 
 ## Use AMC to categorize the variable
 ``` r
+# install.packages("devtools")
+# devtools::install_github("sitingLi/amc")
 library(amc)
 result = amc(input)
 output <- result[["output"]]
@@ -32,6 +34,7 @@ The amc function categorizes this variable into 3 categories.
 
 ## Get the confusion matrix to evaluate the categorization performance by amc
 ``` r
+library(caret)
 predicted_value <- factor(c(t(output)))
 expected_value <- factor(c(t(ground_truth)))
 confusionMatrix(data = predicted_value, reference = expected_value)
@@ -53,7 +56,7 @@ fviz_nbclust(input2, kmeans, method = "wss") # Visualizing the Optimal k
 
 We will determine the optimal k by elbow method:
 
-<img src="elbow1.png" width="40%" />
+<img src="elbow.png" width="40%" />
 
 We can select k = 3.
 
@@ -64,7 +67,7 @@ We can select k = 3.
 library(dplyr)
 output_sim = matrix(NA,1000,1)
 order = rep(1:1000)                  
-km_data_temp <- kmeans(input2$X1, 3, nstart = 8)
+km_data_temp <- kmeans(input2$X1, 3, nstart = 1)
 temp = cbind(order, input2$X1, km_data_temp$cluster, rep(NA))  
 temp = data.frame(temp)
 temp = arrange(temp, V2)                
