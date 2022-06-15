@@ -2,7 +2,7 @@
 
 ## Generate input data 
 - An exposure variable including three categories, which was generated from three normal distributions 
-- The ground truth of number of categories k equals to 3)
+- The ground truth of number of categories k equals to 3
 
 ``` r
 # Generate input data
@@ -58,7 +58,7 @@ We will determine the optimal k by elbow method:
 
 <img src="elbow.png" width="40%" />
 
-We can select k = 3.
+We can select k = 3. (However, k = 4 looks more likely to be the elbow point, which will lead to the wrong number of categories. The optimal k of k-means in this example is ambiguous.) 
 
 
 ## Use K-means to categorize the variable
