@@ -97,6 +97,7 @@ output_sim = temp[,4]
 ## Get the confusion matrix to evaluate the categorization performance by K-means
 
 ``` r
+# library(caret)
 predicted_value2 <- factor(c(t(output_sim)))
 confusionMatrix(data = predicted_value2, reference = expected_value)
 ```
@@ -110,7 +111,7 @@ Accuracy and Kappa score by K-means:
 
 AMC: the amc package itself selects the optimal k as 3
 
-K-means: we select the optimal k as 3 by observing the elbow point
+K-means: we select the optimal k by observing the elbow point (but the optimal k is ambiguous, we used k = 3 for this k-means)
 
 Accuracy and Kappa score by amc:
 - Accuracy : 0.895           
