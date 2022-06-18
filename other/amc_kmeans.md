@@ -116,7 +116,7 @@ Accuracy and Kappa score by K-means:
 
 AMC: the amc package itself selects the optimal k as 3
 
-K-means: we select the optimal k by observing the elbow point (but the optimal k is ambiguous, we used k = 3 for this k-means)
+K-means: we select the optimal k by observing the elbow point (but the optimal k is ambiguous, we used k = 3 in this k-means to calculate the accuracy)
 
 Accuracy and Kappa score by amc:
 - Accuracy : 0.895           
@@ -124,5 +124,6 @@ Accuracy and Kappa score by amc:
 
 Accuracy and Kappa score by K-means:
 - Accuracy : 0.868   
-- Kappa : 0.7797   
-(Using different version of R/R studio may generate slightly different accuracy and Kappa with set.seed() function.)
+- Kappa : 0.7797  
+
+(Using different version of R/R studio may generate slightly different accuracy and Kappa with set.seed() function)
