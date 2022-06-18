@@ -116,7 +116,7 @@ Accuracy and Kappa score by K-means:
 
 AMC: the amc package itself selects the optimal k as 3
 
-K-means: we select the optimal k by observing the elbow point (but the optimal k is ambiguous, we used k = 3 in this k-means to calculate the accuracy)
+K-means: we select the optimal k by observing the elbow point (but the optimal k is ambiguous, we used k = 3 in this K-means to calculate the accuracy)
 
 Accuracy and Kappa score by amc:
 - Accuracy : 0.895           
