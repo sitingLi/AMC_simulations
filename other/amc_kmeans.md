@@ -12,9 +12,9 @@ a1 = rnorm(400, mean = 4, sd=1)
 a2 = rnorm(500, mean = 7, sd=1)
 input = data.frame(c(a0, a1, a2))
 names(input) <- "X1"
-b0 = rep(1,100)
-b1 = rep(2,400)
-b2 = rep(3,500)
+b0 = rep(1, 100)
+b1 = rep(2, 400)
+b2 = rep(3, 500)
 ground_truth = data.frame(c(b0, b1, b2))
 names(ground_truth) <- "X1_ground_truth"
 ```
@@ -70,7 +70,7 @@ library(dplyr)
 n = dim(input)[1]
 kvalue = 3
 
-output_sim = matrix(NA,n,1)
+output_sim = matrix(NA, n, 1)
 order = rep(1:n)                  
 km_data_temp <- kmeans(input2$X1, kvalue, nstart = 1) # To compare the result, we use k = 3 in this k-means
 temp = cbind(order, input2$X1, km_data_temp$cluster, rep(NA))  
@@ -82,14 +82,14 @@ temp[1, 4] = s
 for(j in 2:n)
 {
   
-  if(temp[j,3]==temp[j-1,3])           
+  if(temp[j,3] == temp[j-1,3])           
   {
-    temp[j,4]=s
+    temp[j, 4] = s
   }
   else                             
   {
-    s=s+1
-    temp[j,4]=s
+    s = s + 1
+    temp[j, 4] = s
   }
 }
 
