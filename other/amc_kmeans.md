@@ -58,7 +58,7 @@ We will determine the optimal k by elbow method:
 
 <img src="elbow.png" width="40%" />
 
-We can select k = 3. (However, k = 4 looks more likely to be the elbow point, which will lead to the wrong number of categories. The optimal k of k-means in this example is ambiguous.) 
+We can select k = 3. (However, k = 4 looks more likely to be the elbow point, which will lead to the wrong number of categories. The optimal k of K-means in this example is ambiguous.) 
 
 
 ## Use K-means to categorize the variable
