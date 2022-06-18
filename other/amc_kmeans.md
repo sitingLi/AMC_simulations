@@ -125,3 +125,4 @@ Accuracy and Kappa score by amc:
 Accuracy and Kappa score by K-means:
 - Accuracy : 0.868   
 - Kappa : 0.7797   
+(Using different version of R/R studio may generate slightly different accuracy and Kappa with set.seed() function.)
