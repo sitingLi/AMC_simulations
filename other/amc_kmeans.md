@@ -64,17 +64,22 @@ We can select k = 3. (However, k = 4 looks more likely to be the elbow point, wh
 ## Use K-means to categorize the variable
 
 ``` r
+# Re-name the clusters of K-means (They have random names initially)
+# The cluster with the smallest values should be named as cluster/category 1
 library(dplyr)
-output_sim = matrix(NA,1000,1)
-order = rep(1:1000)                  
-km_data_temp <- kmeans(input2$X1, 3, nstart = 1) # To compare the result, we use k = 3 in this k-means
+n = dim(input)[1]
+kvalue = 3
+
+output_sim = matrix(NA,n,1)
+order = rep(1:n)                  
+km_data_temp <- kmeans(input2$X1, kvalue, nstart = 1) # To compare the result, we use k = 3 in this k-means
 temp = cbind(order, input2$X1, km_data_temp$cluster, rep(NA))  
 temp = data.frame(temp)
 temp = arrange(temp, V2)                
 s=1
 temp[1, 4] = s
 
-for(j in 2:1000)
+for(j in 2:n)
 {
   
   if(temp[j,3]==temp[j-1,3])           
