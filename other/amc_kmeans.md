@@ -45,7 +45,7 @@ Accuracy and Kappa score by amc:
 - Kappa : 0.8188 
 
 
-## Next, we use elbow method to select the k of k-means
+## Next, we use elbow method to select the k of K-means
 ``` r
 #install.packages("factoextra")
 library(factoextra)
