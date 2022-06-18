@@ -72,7 +72,7 @@ kvalue = 3
 
 output_sim = matrix(NA, n, 1)
 order = rep(1:n)                  
-km_data_temp <- kmeans(input2$X1, kvalue, nstart = 1) # To compare the result, we use k = 3 in this k-means
+km_data_temp <- kmeans(input2$X1, kvalue, nstart = 1) # To compare the result, we use k = 3 in this K-means
 temp = cbind(order, input2$X1, km_data_temp$cluster, rep(NA))  
 temp = data.frame(temp)
 temp = arrange(temp, V2)                
