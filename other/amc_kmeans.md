@@ -82,7 +82,7 @@ temp[1, 4] = s
 for(j in 2:n)
 {
   
-  if(temp[j,3] == temp[j-1,3])           
+  if(temp[j, 3] == temp[j - 1, 3])           
   {
     temp[j, 4] = s
   }
@@ -94,7 +94,7 @@ for(j in 2:n)
 }
 
 temp = arrange(temp, order)          
-output_sim = temp[,4]              
+output_sim = temp[, 4]              
 
 ```
 
